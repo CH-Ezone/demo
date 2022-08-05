@@ -3,7 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.TestMapper">
-    <select id="getList" resultType="map">
-    select * from sysuser
+    <select id="getList" resultType="com.example.demo.entity.User">
+    select * from user
     </select>
+    <select id="getId" resultType="int">
+        select max(id) from user
+    </select>
+    <insert id="add" parameterType="com.example.demo.entity.User">
+        insert into user values (#{id},#{name},#{sex},#{age},#{birthday})
+    </insert>
 </mapper>
