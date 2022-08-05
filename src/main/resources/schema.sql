@@ -1,0 +1,23 @@
+CREATE TABLE sysuser (
+                              `user_id` int NOT NULL ,
+                              `dept_id` int DEFAULT NULL,
+                              `login_name` varchar(30) NOT NULL,
+                              `user_name` varchar(30) NOT NULL,
+                              `user_type` varchar(2) DEFAULT '00',
+                              `email` varchar(50) DEFAULT '',
+                              `phonenumber` varchar(11) DEFAULT '',
+                              `sex` char(1) DEFAULT '0' ,
+                              `avatar` varchar(100) DEFAULT '',
+                              `password` varchar(50) DEFAULT '',
+                              `salt` varchar(20) DEFAULT '' ,
+                              `status` char(1) DEFAULT '0',
+                              `del_flag` char(1) DEFAULT '0' ,
+                              `login_ip` varchar(50) DEFAULT '',
+                              `login_date` datetime DEFAULT NULL ,
+                              `create_by` varchar(64) DEFAULT '' ,
+                              `create_time` datetime DEFAULT NULL ,
+                              `update_by` varchar(64) DEFAULT '' ,
+                              `update_time` datetime DEFAULT NULL,
+                              `remark` varchar(500) DEFAULT '',
+                              PRIMARY KEY (`user_id`)
+)

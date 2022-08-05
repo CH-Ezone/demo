@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:sqlite::resource:test.db
+    driver-class-name: org.sqlite.JDBC
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+    initialization-mode: always
+    continue-on-error: true
+server:
+  port: 8078
