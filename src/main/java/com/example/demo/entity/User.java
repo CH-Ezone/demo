@@ -3,11 +3,11 @@ package com.example.demo.entity;
 import java.util.Date;
 
 public class User {
-    int id;
-    String name;
-    int sex;
-    int age;
-    Date birthday=new Date();
+   private int id;
+    private String name;
+    private int sex;
+    private int age;
+    private Date birthday=new Date();
 
     public int getId() {
         return id;
