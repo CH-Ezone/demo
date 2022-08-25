@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: "demo"
+  name: "systan-3057"
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: "demo"
+      app: "systan-3057"
   template:
     metadata:
       labels:
-        app: "demo"
+        app: "systan-3057"
     spec:
       containers:
-        - name: "demo"
+        - name: "systan-3057"
           image: "systan.azurecr.io/systan"
           ports:
           - containerPort: 80
