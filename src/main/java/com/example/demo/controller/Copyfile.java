@@ -4,19 +4,23 @@ package com.example.demo.controller;
 import java.io.*;
 
 public class Copyfile {
-    static String filesName="/data/vsftpd/dsbvgpmn/pic_name.txt";
-    static String formPath="/data/vsftpd/dsbvgpmn/picsAll";
-    static String toPath="/data/vsftpd/dsbvgpmn/need";
-    public static void main(String[] arg) throws Exception {
-        FileReader reader=new FileReader(filesName);
-        BufferedReader bufferedReader=new BufferedReader(reader);
-        String fileName;
-        File file =new File(toPath);
-        if(!file.exists()){
-            file.mkdirs();
-        }
-        while ((fileName = bufferedReader.readLine())!=null){
-            copy(fileName);
+    static String filesName="D:/pic_name.txt";
+    static String formPath="D:/test";
+    static String toPath="D:/test2";
+    public static void main(String[] args){
+        try {
+            FileReader reader = new FileReader(filesName);
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String fileName;
+            File file = new File(toPath);
+            if (!file.exists()) {
+                file.mkdirs();
+            }
+            while ((fileName = bufferedReader.readLine()) != null) {
+                copy(fileName);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
     static void copy(String name){
